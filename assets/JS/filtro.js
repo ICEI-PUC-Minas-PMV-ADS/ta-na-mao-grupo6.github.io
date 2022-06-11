@@ -19,7 +19,7 @@ class Filtro {
         const href = window.location.pathname;
         fetch(href)
             .then(anuncioFiltrado => {
-                if (href === "/index.html" || href === "/home-page-logado.html") {
+                if (href === "/ta-na-mao-grupo6.github.io/index.html" || href === "/ta-na-mao-grupo6.github.io/home-page-logado.html") {
                     const anunciosFiltrados = document.querySelector(".anuncios-filtrados");
                     if (filterAnuncios.length !== 0) {
                         if (anunciosFiltrados.getElementsByClassName('meu-anuncio') !== null) anunciosFiltrados.innerHTML = "";
