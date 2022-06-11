@@ -195,6 +195,7 @@ class AtualizaDados {
                 }
             }
         }
+        if(anunciosGerais !== null){
         for (i = 0; i < anunciosGerais.length; i++) {
             if (anunciosGerais !== null && i < anunciosGerais.length) {
                 if (anunciosGerais[i].nomeUsuario === userLogado.nome) {
@@ -203,6 +204,8 @@ class AtualizaDados {
                 }
             }
         }
+        }
+        if(anunciosProdutos !== null){
         for (i = 0; i < anunciosProdutos.length; i++) {
             if (anunciosProdutos !== null && i < anunciosProdutos.length) {
                 if (anunciosProdutos[i].nomeUsuario === userLogado.nome) {
@@ -211,6 +214,8 @@ class AtualizaDados {
                 }
             }
         }
+        }
+        if(anunciosServicos !== null){
         for (i = 0; i < anunciosServicos.length; i++) {
             if (anunciosServicos !== null && i < anunciosServicos.length) {
                 if (anunciosServicos[i].nomeUsuario === userLogado.nome) {
@@ -218,6 +223,7 @@ class AtualizaDados {
                     localStorage.setItem('anunciosServiços', JSON.stringify(anunciosServicos));
                 }
             }
+        }
         }
         for (i = 0; i < dadosUsuario.length; i++) {
             if (userLogado.cpf === dadosUsuario[i].cpf || userLogado.email === dadosUsuario[i].email) {
