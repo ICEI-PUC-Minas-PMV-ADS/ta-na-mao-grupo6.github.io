@@ -186,44 +186,46 @@ class AtualizaDados {
         const anunciosProdutos = JSON.parse(localStorage.getItem("anunciosProdutos"));
         const anunciosServicos = JSON.parse(localStorage.getItem("anunciosServiços"));
         let i;
-
+        
+        if (meusAnuncios !== null){
         for (i = 0; i < meusAnuncios.length; ++i) {
-            if (meusAnuncios !== null && i < meusAnuncios.length) {
+            if (i < meusAnuncios.length) {
                 if (meusAnuncios[i].nomeUsuario === userLogado.nome) {
                     meusAnuncios[i].nomeUsuario = userName.value;
                     localStorage.setItem('meusAnuncios', JSON.stringify(meusAnuncios));
+                    }
                 }
             }
         }
         if(anunciosGerais !== null){
         for (i = 0; i < anunciosGerais.length; i++) {
-            if (anunciosGerais !== null && i < anunciosGerais.length) {
+            if (i < anunciosGerais.length) {
                 if (anunciosGerais[i].nomeUsuario === userLogado.nome) {
                     anunciosGerais[i].nomeUsuario = userName.value;
                     localStorage.setItem('anunciosGerais', JSON.stringify(anunciosGerais));
+                    }
                 }
             }
-        }
         }
         if(anunciosProdutos !== null){
         for (i = 0; i < anunciosProdutos.length; i++) {
-            if (anunciosProdutos !== null && i < anunciosProdutos.length) {
+            if (i < anunciosProdutos.length) {
                 if (anunciosProdutos[i].nomeUsuario === userLogado.nome) {
                     anunciosProdutos[i].nomeUsuario = userName.value;
                     localStorage.setItem('anunciosProdutos', JSON.stringify(anunciosProdutos));
+                    }
                 }
             }
-        }
         }
         if(anunciosServicos !== null){
         for (i = 0; i < anunciosServicos.length; i++) {
-            if (anunciosServicos !== null && i < anunciosServicos.length) {
+            if (i < anunciosServicos.length) {
                 if (anunciosServicos[i].nomeUsuario === userLogado.nome) {
                     anunciosServicos[i].nomeUsuario = userName.value;
                     localStorage.setItem('anunciosServiços', JSON.stringify(anunciosServicos));
+                    }
                 }
             }
-        }
         }
         for (i = 0; i < dadosUsuario.length; i++) {
             if (userLogado.cpf === dadosUsuario[i].cpf || userLogado.email === dadosUsuario[i].email) {
